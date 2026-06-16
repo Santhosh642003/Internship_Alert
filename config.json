@@ -1,0 +1,16 @@
+{
+  "role_keywords": ["machine learning", "ml engineer", "nlp", "natural language", "deep learning", "artificial intelligence", "data scien", "applied scien", "research", "ai engineer", "ml intern", "software engineer"],
+  "categories": ["AI/ML/Data", "Data Science, AI & Machine Learning", "Software", "Software Engineering"],
+  "locations_allow": ["new york", "nyc", "brooklyn", "manhattan", "newark", "jersey city", "jersey", "remote"],
+  "allow_remote": true,
+  "allow_us_wide": false,
+  "terms_allow": ["Fall 2026", "Summer 2026", "Spring 2026"],
+  "exclude_no_sponsorship": true,
+  "max_per_message": 8,
+  "sources": {
+    "simplify_github": true,
+    "greenhouse_tokens": [],
+    "lever_tokens": [],
+    "ashby_orgs": []
+  }
+}

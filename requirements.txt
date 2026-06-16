@@ -1,0 +1,1 @@
+# No external dependencies — radar.py uses only the Python standard library.

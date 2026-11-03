@@ -1,0 +1,141 @@
+{
+  "keywords": [
+    "software",
+    "machine learning",
+    "applied ai",
+    "research engineer",
+    "data scientist",
+    "data analyst",
+    "speech",
+    "nlp",
+    "algorithm engineer",
+    "forward deployed"
+  ],
+  "skills": [
+    "Python",
+    "C++",
+    "SQL",
+    "PyTorch",
+    "TensorFlow",
+    "React",
+    "PostgreSQL",
+    "NLP",
+    "speech",
+    "Hadoop",
+    "machine learning"
+  ],
+  "locations": "united states|remote,? us|, (?:ca|ny|wa|ma|nj|tx|il)\\b|san francisco|sunnyvale|san jose|seattle|new york|chicago|boston|bellevue|san mateo|bengaluru|bangalore|london|amsterdam|berlin|aarhus",
+  "max_daily": 8,
+  "sources": [
+    [
+      "asteraearlycareer2027",
+      "greenhouse",
+      "asteraearlycareer2027"
+    ],
+    [
+      "databricks",
+      "greenhouse",
+      "databricks"
+    ],
+    [
+      "pinterest",
+      "greenhouse",
+      "pinterest"
+    ],
+    [
+      "verkada",
+      "greenhouse",
+      "verkada"
+    ],
+    [
+      "authenticinsurance",
+      "greenhouse",
+      "authenticinsurance"
+    ],
+    [
+      "singlestore",
+      "greenhouse",
+      "singlestore"
+    ],
+    [
+      "stripe",
+      "greenhouse",
+      "stripe"
+    ],
+    [
+      "affirm",
+      "greenhouse",
+      "affirm"
+    ],
+    [
+      "datadog",
+      "greenhouse",
+      "datadog"
+    ],
+    [
+      "dropbox",
+      "greenhouse",
+      "dropbox"
+    ],
+    [
+      "reddit",
+      "greenhouse",
+      "reddit"
+    ],
+    [
+      "samsara",
+      "greenhouse",
+      "samsara"
+    ],
+    [
+      "twilio",
+      "greenhouse",
+      "twilio"
+    ],
+    [
+      "imc",
+      "greenhouse",
+      "imc"
+    ],
+    [
+      "chalk",
+      "ashby",
+      "chalk"
+    ],
+    [
+      "cursor",
+      "ashby",
+      "cursor"
+    ],
+    [
+      "applied",
+      "ashby",
+      "applied"
+    ],
+    [
+      "notion",
+      "ashby",
+      "notion"
+    ],
+    [
+      "weride",
+      "lever",
+      "weride"
+    ],
+    [
+      "palantir",
+      "lever",
+      "palantir"
+    ],
+    [
+      "Stripe",
+      "page",
+      "https://stripe.com/careers/listing/software-engineer-new-grad/8128744"
+    ],
+    [
+      "Longshot Systems",
+      "workable",
+      "longshot-systems-ltd"
+    ]
+  ]
+}

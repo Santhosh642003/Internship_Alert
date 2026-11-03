@@ -1,0 +1,16 @@
+# Graduate Radar
+This extension imports get_json from the existing radar.py in Santhosh642003/Internship_Alert. Run from that repository with Python 3.12 and its existing config.json. It keeps graduate_seen.json separate from internship history.
+
+1. Put graduate_radar.py, graduate_config.json and test_graduate_radar.py beside radar.py. Put graduate.yml under .github/workflows. Keep the original internship workflow.
+2. Run python -m unittest test_graduate_radar and python graduate_radar.py --dry-run. Dry run does not send or persist records. Source failures print to stderr; inspect them.
+3. Configure repository Actions secrets TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID for your own chat. Never put credentials in a file. Enable Actions and allow this workflow to commit delivery history. Protected branches can require a different state store.
+4. Run the Graduate Radar workflow manually once. Its schedule is 13:17 UTC daily (08:17 New York during standard time, 09:17 during daylight time). Standard GitHub-hosted runners on public repositories are free under GitHub's applicable terms. Schedules can be delayed.
+5. Open Telegram and confirm delivery before relying on it. Entries include fit terms, link, location, visa signal, resume and a contact type. The cap is eight new entries per run; remaining unseen rows are eligible on later runs. Each entry is a separate message in the daily batch. A quiet day sends a no-match message. Failures are reported and set a failing exit status.
+
+Config uses source triples [company, provider, board token or direct URL]. Providers: greenhouse, lever, ashby, workable, page. The page adapter accepts an explicitly listed public employer page with JobPosting JSON-LD; it does not crawl linked pages or bypass access controls. Add a board only after verifying the token on an official company page. Config ships with monitored graduate employers and a Workable watch company. For target_companies.csv entries without an available feed use their official alerts or manual searches. No universal Workday, LinkedIn or JavaScript-page crawler is implied.
+
+Check twice: positive wording must be specific to this vacancy. Negative wording and required PhD filters are heuristics; read the actual JD for exceptions, degree rules, deadline, team location and citizenship. Local eligibility is always a manual decision. Never submit directly from a digest. The score is a keyword match, not a screen probability.
+
+Testing checklist: valid and forbidden visa wording; unsupported location; required PhD; old deadline; matching MSc role; duplicate ID on rerun; failed Telegram send; dry run with no state change; expired official URL; partial source failure; successful delivery and state persistence on GitHub. Telegram and git are separate systems. A crash after send but before persistence can redeliver; successful delivery cannot be guaranteed exactly once. Watch Actions for failed writes.
+
+Docs: https://developers.greenhouse.io/job-board.html | https://github.com/lever/postings-api | https://developers.ashbyhq.com/docs/public-job-posting-api | https://workable.readme.io/reference/jobs-1 | https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule

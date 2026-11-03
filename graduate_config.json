@@ -24,7 +24,7 @@
     "Hadoop",
     "machine learning"
   ],
-  "locations": "united states|remote,? us|, (?:ca|ny|wa|ma|nj|tx|il)\\b|san francisco|sunnyvale|san jose|seattle|new york|chicago|boston|bellevue|san mateo|bengaluru|bangalore|london|amsterdam|berlin|aarhus",
+  "locations": "united states|remote,? us|, (?:ca|ny|wa|ma|nj|tx|il)\\b|san francisco|sunnyvale|san jose|seattle|new york|chicago|boston|bellevue|san mateo|bengaluru|bangalore|london|amsterdam|berlin|aarhus|\\b(?:SF|NY|US|USA)\\b",
   "max_daily": 8,
   "sources": [
     [

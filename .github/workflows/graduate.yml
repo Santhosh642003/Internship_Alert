@@ -1,0 +1,34 @@
+name: Graduate Radar
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 13 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: graduate-radar
+  cancel-in-progress: false
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Send digest
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python graduate_radar.py
+      - name: Persist successful deliveries
+        if: always()
+        run: |
+          test -f graduate_seen.json || exit 0
+          git config user.name graduate-radar
+          git config user.email graduate-radar@users.noreply.github.com
+          git add graduate_seen.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Record delivered graduate roles'
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push

@@ -57,7 +57,10 @@ def fetch(kind,board):
     elif kind=='ashby':
         for j in get_json(f'https://api.ashbyhq.com/posting-api/job-board/{board}')['jobs']:
             if j.get('isListed',True):
-                yield row(j['jobUrl'],j['title'],j['location'],j['descriptionPlain'],j['jobUrl'])
+                places=[j['location'], *[l.get('location','') for l in j.get('secondaryLocations',[])]]
+                address=(j.get('address') or {}).get('postalAddress',{})
+                places.extend(str(address.get(k) or '') for k in ('addressLocality','addressRegion','addressCountry'))
+                yield row(j['jobUrl'],j['title'],', '.join(filter(None,places)),j['descriptionPlain'],j['jobUrl'])
     elif kind=='lever':
         offset=0
         while True:
